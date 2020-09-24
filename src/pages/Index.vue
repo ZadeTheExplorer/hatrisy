@@ -9,8 +9,9 @@
       <div class="container">
         <div class="content-center brand">
           <img class="n-logo" src="img/now-logo.png" alt="" />
-          <h1 class="h1-seo">Now UI Kit.</h1>
-          <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+          <h1 class="h1-seo">Hà Trí Sỹ</h1>
+          <h3>I am decorating my sweet-home. Come back in the near future.</h3>
+          <h3>Tôi chỉ yêu mình cô thôi! UYÊN Ủn Ỉn ạ!.</h3>
         </div>
         <h6 class="category category-absolute">
           Designed by
