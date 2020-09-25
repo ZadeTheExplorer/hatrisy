@@ -1,34 +1,36 @@
 <template>
   <div>
-    <div class="page-header clear-filter" filter-color="orange">
+    <div class="page-header clear-filter text_align-center" filter-color="orange">
       <parallax
           class="page-header-image"
-          style="background-image:url('img/bg5.jpg')"
+          style="background-image:url('img/cowboy-background.jpg')"
       >
       </parallax>
       <div class="container">
-        <div class="photo-container" >
-          <img src="img/patrick-ha.jpg" width="300" height="300" alt="Patrick Ha" />
+        <div class="photo-container">
+          <img src="img/sy-avatar.png" width="300" height="300" alt="Patrick Ha"/>
         </div>
         <h3 class="title">Patrick Ha</h3>
+        <p/>
         <p class="category">Software Developer</p>
-<!--        <div class="content">-->
-<!--          <div class="social-description">-->
-<!--            <h2>26</h2>-->
-<!--            <p>Comments</p>-->
-<!--          </div>-->
-<!--          <div class="social-description">-->
-<!--            <h2>26</h2>-->
-<!--            <p>Comments</p>-->
-<!--          </div>-->
-<!--          <div class="social-description">-->
-<!--            <h2>48</h2>-->
-<!--            <p>Bookmarks</p>-->
-<!--          </div>-->
-<!--        </div>-->
+        <p class="category">~ Currently working in CMC Global ~</p>
+        <!--        <div class="content">-->
+        <!--          <div class="social-description">-->
+        <!--            <h2>26</h2>-->
+        <!--            <p>Comments</p>-->
+        <!--          </div>-->
+        <!--          <div class="social-description">-->
+        <!--            <h2>26</h2>-->
+        <!--            <p>Comments</p>-->
+        <!--          </div>-->
+        <!--          <div class="social-description">-->
+        <!--            <h2>48</h2>-->
+        <!--            <p>Bookmarks</p>-->
+        <!--          </div>-->
+        <!--        </div>-->
       </div>
     </div>
-    <div class="section">
+    <div class="section cv-wrapper">
       <!-- Page Content-->
       <div class="container-fluid p-0">
         <!-- About-->
@@ -42,15 +44,26 @@
               Cau Giay district · Ha Noi, Vietnam · (+84) 0845829982 ·
               <a href="mailto:name@email.com">hatrisy@gmail.com</a>
             </div>
-            <p class="lead mb-5">Hi! I am Sy. I spend my last 2 years learning and enhancing my value at Queensland University of Technology (QUT). My proudest achievement is maintaining a distinction GPA while enjoying "uni-life" in an unfamiliar country. I have been fascinated by forming future IT with AI and Big Data researches. My objective is obtaining experience and knowledge to kick-start my future career as a data scientist, and acquiring training in an enthusiasm start-up workspace.</p>
+            <p class="lead mb-5">Hi! I am Sy. I spend my last 2 years learning and enhancing my value at Queensland
+              University of Technology (QUT). My proudest achievement is maintaining a distinction GPA while enjoying
+              "uni-life" in an unfamiliar country. I have been fascinated by forming future IT with AI and Big Data
+              researches. My objective is obtaining experience and knowledge to kick-start my future career as a data
+              scientist, and acquiring training in an enthusiasm start-up workspace.</p>
             <div class="social-icons">
-              <a class="social-icon" href="https://www.linkedin.com/in/sy-tri-ha-9a1490a4/"><i class="fab fa-linkedin-in"></i></a>
-              <a class="social-icon" href="https://github.com/ZadeTheExplorer"><i class="fab fa-github"></i></a>
-              <a class="social-icon" href="https://www.facebook.com/ZadeMcFaro"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-icon" href="https://www.linkedin.com/in/sy-tri-ha/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="social-icon" href="https://github.com/ZadeTheExplorer" target="_blank">
+
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social-icon" href="https://www.facebook.com/ZadeMcFaro" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
             </div>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0"/>
         <!-- Experience-->
         <section class="resume-section" id="experience">
           <div class="resume-section-content">
@@ -60,13 +73,15 @@
               <div class="flex-grow-1">
                 <h3 class="mb-0">Software Engineering Intern</h3>
                 <div class="subheading mb-3">CMC Global</div>
-                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate
+                  B2C users after installed base benefits. Dramatically visualize customer directed convergence without
+                  revolutionary ROI.</p>
               </div>
-              <div class="flex-shrink-0"><span class="text-primary">July 2020 - Present</span></div>
+              <div class="flex-shrink-0"><span class="text-primary" style="padding-top: -10px">July 2020 - Present</span></div>
             </div>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0"/>
         <!-- Education-->
         <section class="resume-section" id="education">
           <div class="resume-section-content">
@@ -92,25 +107,30 @@
             </div>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0"/>
         <!-- Skills-->
         <section class="resume-section" id="skills">
           <div class="resume-section-content">
             <h2 class="mb-5">Skills</h2>
-            <div class="subheading mb-3">Programming Languages & Tools</div>
+            <div class="subheading mb-3">Programming Languages</div>
             <ul class="list-inline dev-icons">
-              <li class="list-inline-item"><i class="fab fa-python"></i></li>
-              <li class="list-inline-item"><i class="fab fa-java"></i></li>
-              <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-              <li class="list-inline-item"><i class="fab fa-react"></i></li>
-              <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-              <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-              <li class="list-inline-item"><i class="fab fa-github"></i></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/dusk/64/000000/python.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/javascript.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/vue-js.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/react-native.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/nodejs.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/npm.png"/></li>
+            </ul>
+            <div class="subheading mb-3">Tools</div>
+            <ul class="list-inline dev-icons">
+              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/visual-studio-code-2019.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/github.png"/></li>
             </ul>
             <div class="subheading mb-3">Team Collaboration Tools</div>
             <ul class="list-inline dev-icons">
-              <li class="list-inline-item"><i class="fab fa-slack"></i></li>
-              <li class="list-inline-item"><i class="fab fa-trello"></i></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/slack-new.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/trello.png"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/jira.png"/></li>
             </ul>
             <div class="subheading mb-3">Workflow</div>
             <ul class="fa-ul mb-0">
@@ -123,16 +143,20 @@
 
           </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0"/>
         <!-- Interests-->
         <section class="resume-section" id="interests">
           <div class="resume-section-content">
             <h2 class="mb-5">Interests</h2>
-            <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+            <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid
+              skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free
+              climbing, and kayaking.</p>
+            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television
+              shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology
+              advancements in the front-end web development world.</p>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr class="m-0"/>
         <!-- Awards-->
         <section class="resume-section" id="awards">
           <div class="resume-section-content">
@@ -148,22 +172,17 @@
         </section>
       </div>
     </div>
-    <main-footer></main-footer>
   </div>
 </template>
 <script>
-import {  Button, FormGroupInput } from '@/components';
-import MainFooter from '@/layout/MainFooter';
-export default {
-  name: 'login-page',
-  bodyClass: 'login-page',
-  components: {
 
-    MainFooter,
-    [Button.name]: Button,
-    [FormGroupInput.name]: FormGroupInput
+export default {
+  name: 'cv-page',
+  bodyClass: 'cv-page',
+  components: {
   }
 };
+
 </script>
 <style>
 h1,
@@ -176,7 +195,21 @@ h6 {
 }
 
 h1 {
-  line-height: 1;
+  font-size: 5em;
+}
+
+.cv-wrapper {
+  background: rgb(255, 230, 255);
+  background: linear-gradient(126deg, rgba(255, 230, 255, 1) 0%, rgba(255, 230, 124, 1) 100%);
+}
+
+.text-primary {
+  color: blue !important;
+  padding-bottom: 0 !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #824027 !important;
 }
 
 p.lead {
@@ -196,6 +229,7 @@ p.lead {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
+
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
 }
@@ -211,16 +245,19 @@ p.lead {
     width: 17rem;
     height: 100vh;
   }
+
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
   }
+
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
+
   #sideNav .navbar-collapse {
     display: flex;
     align-items: flex-start;
@@ -228,17 +265,21 @@ p.lead {
     width: 100%;
     margin-bottom: auto;
   }
+
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
 }
+
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
@@ -251,9 +292,11 @@ p.lead {
   font-size: 1.5rem;
   margin-right: 1.5rem;
 }
+
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
+
 .social-icons .social-icon:hover {
   background-color: #bd5d38;
 }
@@ -271,8 +314,10 @@ section.resume-section {
   padding-bottom: 5rem;
   max-width: 75rem;
 }
+
 section.resume-section .resume-section-content {
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
@@ -280,6 +325,7 @@ section.resume-section .resume-section-content {
     min-height: 100vh;
   }
 }
+
 @media (min-width: 992px) {
   section.resume-section {
     padding-left: 3rem;

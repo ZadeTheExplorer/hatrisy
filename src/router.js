@@ -6,7 +6,7 @@ import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
-import cv from './pages/resume';
+import CvPage from './pages/resume';
 Vue.use(Router);
 
 export default new Router({
@@ -48,9 +48,9 @@ export default new Router({
       }
     },
     {
-      path: '/cv',
-      name: 'cv',
-      components: { default: cv},
+      path: '/resume',
+      name: 'resume',
+      components: { default: CvPage,header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }

@@ -8,34 +8,31 @@
       <nav>
         <ul>
           <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
+            <a href="">
+              Ha Tri Sy
             </a>
           </li>
           <li>
-            <a href="https:///presentation.creative-tim.com">
+            <a href="#/resume">
               About Us
             </a>
           </li>
           <li>
-            <a href="https:///blog.creative-tim.com">
+            <a href="#Blog">
               Blog
             </a>
           </li>
         </ul>
       </nav>
       <div class="copyright">
-        &copy; {{ year }}, Designed by
-        <a href="https:///www.invisionapp.com" target="_blank" rel="noopener"
-          >Invision</a
-        >. Coded by
-        <a href="https://binarcode.com" target="_blank" rel="noopener"
-          >BinarCode</a
-        >
-        and
-        <a href="https://www.creative-tim.com" target="_blank" rel="noopener"
-          >Creative Tim</a
-        >.
+        &copy; {{ year }}, Template designed by
+        <a href="https:///www.invisionapp.com" target="_blank" rel="noopener">Invision</a>
+        ,
+        <a href="https://binarcode.com" target="_blank" rel="noopener">BinarCode</a>
+        , and
+        <a href="https://www.creative-tim.com" target="_blank" rel="noopener">Creative Tim</a>
+        . Coded by
+        <a href="https://hatrisy.herokuapp.com/#/" target="_blank" rel="noopener">Patrick Ha</a>.
       </div>
     </div>
   </footer>

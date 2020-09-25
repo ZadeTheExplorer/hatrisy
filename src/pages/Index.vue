@@ -13,13 +13,13 @@
           <h3>I am decorating my sweet-home. Come back in the near future.</h3>
           <h3></h3>
         </div>
-        <h6 class="category category-absolute">
-          Designed by
-          <a href="https://www.facebook.com/ZadeMcFaro" target="_blank">
-            <img src="img/now-logo.png" width="50" height="50" class="now-ui-logo" /> </a
-          >. Coded by
-          <a href="https://www.facebook.com/ZadeMcFaro" class="btn btn-icon btn-neutral btn-danger btn-round  mt-2"><i class="fab fa-facebook"/> </a>.
-        </h6>
+<!--        <h6 class="category category-absolute">-->
+<!--          Designed by-->
+<!--          <a href="https://www.facebook.com/ZadeMcFaro" target="_blank">-->
+<!--            <img src="img/now-logo.png" width="50" height="50" class="now-ui-logo" /> </a-->
+<!--          >. Coded by-->
+<!--          <a href="https://www.facebook.com/ZadeMcFaro" class="btn btn-icon btn-neutral btn-danger btn-round  mt-2"><i class="fab fa-facebook"/> </a>.-->
+<!--        </h6>-->
       </div>
     </div>
 <!--    <div class="main">-->
@@ -41,33 +41,33 @@
 <!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
-    <basic-elements></basic-elements>
-    <navigation></navigation>
-    <tabs-section></tabs-section>
-    <progress-pagination></progress-pagination>
-    <notifications></notifications>
-    <typography></typography>
-    <javascript-components></javascript-components>
-    <carousel-section></carousel-section>
-    <nucleo-icons-section></nucleo-icons-section>
-    <div class="section">
-      <div class="container text-center">
-        <div class="row justify-content-md-center">
-          <div class="col-md-12 col-lg-8">
-            <h2 class="title">Completed with examples</h2>
-            <h5 class="description">
-              The kit comes with three pre-built pages to help you get started
-              faster. You can change the text and images and you're good to go.
-              More importantly, looking at them will give you a picture of what
-              you can built with this powerful Bootstrap 4 ui kit.
-            </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <signup-form></signup-form>
-    <examples-section></examples-section>
-    <download-section></download-section>
+<!--    <basic-elements></basic-elements>-->
+<!--    <navigation></navigation>-->
+<!--    <tabs-section></tabs-section>-->
+<!--    <progress-pagination></progress-pagination>-->
+<!--    <notifications></notifications>-->
+<!--    <typography></typography>-->
+<!--    <javascript-components></javascript-components>-->
+<!--    <carousel-section></carousel-section>-->
+<!--    <nucleo-icons-section></nucleo-icons-section>-->
+<!--    <div class="section">-->
+<!--      <div class="container text-center">-->
+<!--        <div class="row justify-content-md-center">-->
+<!--          <div class="col-md-12 col-lg-8">-->
+<!--            <h2 class="title">Completed with examples</h2>-->
+<!--            <h5 class="description">-->
+<!--              The kit comes with three pre-built pages to help you get started-->
+<!--              faster. You can change the text and images and you're good to go.-->
+<!--              More importantly, looking at them will give you a picture of what-->
+<!--              you can built with this powerful Bootstrap 4 ui kit.-->
+<!--            </h5>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <signup-form></signup-form>-->
+<!--    <examples-section></examples-section>-->
+<!--    <download-section></download-section>-->
   </div>
 </template>
 <script>
@@ -90,18 +90,18 @@ export default {
   bodyClass: 'index-page',
   components: {
     Parallax,
-    BasicElements,
-    Navigation,
-    TabsSection,
-    ProgressPagination,
-    Notifications,
-    Typography,
-    JavascriptComponents,
-    CarouselSection,
-    NucleoIconsSection,
-    SignupForm,
-    ExamplesSection,
-    DownloadSection
+    // BasicElements,
+    // Navigation,
+    // TabsSection,
+    // ProgressPagination,
+    // Notifications,
+    // Typography,
+    // JavascriptComponents,
+    // CarouselSection,
+    // NucleoIconsSection,
+    // SignupForm,
+    // ExamplesSection,
+    // DownloadSection
   }
 };
 </script>

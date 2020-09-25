@@ -60,13 +60,20 @@
               icon="now-ui-icons files_single-copy-04"
               class="nav-item"
       >
-        <nav-link to="/landing">
-          <i class="now-ui-icons education_paper"></i> Landing
+        <!--        TODO: change to /profile-->
+        <nav-link to="#LandingPage">
+          <i class="fa fa-university"></i> Landing
         </nav-link>
-        <nav-link to="/login">
+        <nav-link to="#Weather">
+          <i class="fa fa-cloud"></i> Weather App
+        </nav-link>
+        <nav-link to="#Calculator">
+          <i class="fa fa-calculator"></i> Online Calculator
+        </nav-link>
+        <nav-link to="#Login">
           <i class="now-ui-icons users_circle-08"></i> Login
         </nav-link>
-        <nav-link to="/profile">
+        <nav-link to="/resume">
           <i class="now-ui-icons users_single-02"></i> Profile
         </nav-link>
       </drop-down>
@@ -78,7 +85,7 @@
         <!--        >-->
         <a
             class="nav-link"
-            href="#/profile"
+            href="#/resume"
         >
           <i class="now-ui-icons users_single-02"></i>
           <p>About Me</p>
