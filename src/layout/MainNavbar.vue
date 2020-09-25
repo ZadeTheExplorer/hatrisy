@@ -8,7 +8,7 @@
   >
     <template>
       <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Now Ui Kit
+        Zade The Explorer
       </router-link>
       <el-popover
         ref="popover1"
@@ -18,42 +18,46 @@
         trigger="hover"
       >
         <div class="popover-body">
-          Designed by Invision. Coded by Creative Tim
+          Knowledge is power!
         </div>
       </el-popover>
     </template>
     <template slot="navbar-menu">
       <li class="nav-item">
+        <!--        <a-->
+        <!--          class="nav-item"-->
+        <!--          href="https://www.creative-tim.com/product/vue-now-ui-kit"-->
+        <!--          target="_blank"-->
+        <!--        >-->
         <a
-          class="nav-link"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit"
-          target="_blank"
+            class="nav-link"
+            href="/"
         >
-          <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-          <p>Download</p>
+          <i class="now-ui-icons objects_spaceship"></i>
+          <p>Main</p>
         </a>
       </li>
-      <drop-down
-        tag="li"
-        title="Components"
-        icon="now-ui-icons design_app"
-        class="nav-item"
-      >
-        <nav-link to="/">
-          <i class="now-ui-icons business_chart-pie-36"></i> All components
-        </nav-link>
-        <a
-          href="https://demos.creative-tim.com/vue-now-ui-kit/documentation"
-          target="_blank"
-          class="dropdown-item"
-        >
-          <i class="now-ui-icons design_bullet-list-67"></i> Documentation
-        </a>
-      </drop-down>
+<!--      <drop-down-->
+<!--        tag="li"-->
+<!--        title="Components"-->
+<!--        icon="now-ui-icons design_app"-->
+<!--        class="nav-item"-->
+<!--      >-->
+<!--        <nav-link to="/">-->
+<!--          <i class="now-ui-icons business_chart-pie-36"></i> All components-->
+<!--        </nav-link>-->
+<!--        <a-->
+<!--          href="https://demos.creative-tim.com/vue-now-ui-kit/documentation"-->
+<!--          target="_blank"-->
+<!--          class="dropdown-item"-->
+<!--        >-->
+<!--          <i class="now-ui-icons design_bullet-list-67"></i> Documentation-->
+<!--        </a>-->
+<!--      </drop-down>-->
       <drop-down
               tag="li"
-              title="Examples"
-              icon="now-ui-icons design_image"
+              title="Projects"
+              icon="now-ui-icons files_single-copy-04"
               class="nav-item"
       >
         <nav-link to="/landing">
@@ -67,36 +71,50 @@
         </nav-link>
       </drop-down>
       <li class="nav-item">
+        <!--        <a-->
+        <!--          class="nav-item"-->
+        <!--          href="https://www.creative-tim.com/product/vue-now-ui-kit"-->
+        <!--          target="_blank"-->
+        <!--        >-->
         <a
-          class="nav-link btn btn-neutral"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit-pro"
-          target="_blank"
+            class="nav-link"
+            href="#/profile"
         >
-          <i class="now-ui-icons arrows-1_share-66"></i>
-          <p>Upgrade to PRO</p>
+          <i class="now-ui-icons users_single-02"></i>
+          <p>About Me</p>
         </a>
       </li>
+<!--      <li class="nav-item">-->
+<!--        <a-->
+<!--          class="nav-link btn btn-neutral"-->
+<!--          href="https://www.creative-tim.com/product/vue-now-ui-kit-pro"-->
+<!--          target="_blank"-->
+<!--        >-->
+<!--          <i class="now-ui-icons arrows-1_share-66"></i>-->
+<!--          <p>Upgrade to PRO</p>-->
+<!--        </a>-->
+<!--      </li>-->
 
       <li class="nav-item">
         <a
           class="nav-link"
           rel="tooltip"
-          title="Follow us on Twitter"
+          title="Checkout my Github"
           data-placement="bottom"
-          href="https://twitter.com/CreativeTim"
+          href="https://github.com/ZadeTheExplorer"
           target="_blank"
         >
-          <i class="fab fa-twitter"></i>
-          <p class="d-lg-none d-xl-none">Twitter</p>
+          <i class="fab fa-github"></i>
+          <p class="d-lg-none d-xl-none">Github</p>
         </a>
       </li>
       <li class="nav-item">
         <a
           class="nav-link"
           rel="tooltip"
-          title="Like us on Facebook"
+          title="Add me on Facebook"
           data-placement="bottom"
-          href="https://www.facebook.com/CreativeTim"
+          href="https://www.facebook.com/ZadeMcFaro"
           target="_blank"
         >
           <i class="fab fa-facebook-square"></i>
@@ -107,13 +125,13 @@
         <a
           class="nav-link"
           rel="tooltip"
-          title="Follow us on Instagram"
+          title="Connect me on LinkedIn"
           data-placement="bottom"
-          href="https://www.instagram.com/CreativeTimOfficial"
+          href="https://www.linkedin.com/in/sy-tri-ha/"
           target="_blank"
         >
-          <i class="fab fa-instagram"></i>
-          <p class="d-lg-none d-xl-none">Instagram</p>
+          <i class="fab fa-linkedin"></i>
+          <p class="d-lg-none d-xl-none">LinkedIn</p>
         </a>
       </li>
     </template>

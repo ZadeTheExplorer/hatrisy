@@ -8,7 +8,7 @@
       </parallax>
       <div class="container">
         <div class="content-center brand">
-          <img class="n-logo" src="img/now-logo.png" alt="" />
+<!--          <img class="n-logo" src="img/now-logo.png" alt="" />-->
           <h1 class="h1-seo">Hà Trí Sỹ</h1>
           <h3>I am decorating my sweet-home. Come back in the near future.</h3>
           <h3></h3>
@@ -16,36 +16,31 @@
         <h6 class="category category-absolute">
           Designed by
           <a href="https://www.facebook.com/ZadeMcFaro" target="_blank">
-            <img src="img/facebook-logo1.png" width="35" height="35" class="invision-logo" /> </a
+            <img src="img/now-logo.png" width="50" height="50" class="now-ui-logo" /> </a
           >. Coded by
-          <a href="https://www.creative-tim.com" target="_blank">
-            <img
-              src="img/creative-tim-white-slim2.png"
-              class="creative-tim-logo"
-            /> </a
-          >.
+          <a href="https://www.facebook.com/ZadeMcFaro" class="btn btn-icon btn-neutral btn-danger btn-round  mt-2"><i class="fab fa-facebook"/> </a>.
         </h6>
       </div>
     </div>
-    <div class="main">
-      <div class="section section-images">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="hero-images-container">
-                <img src="img/hero-image-1.png" alt="" />
-              </div>
-              <div class="hero-images-container-1">
-                <img src="img/hero-image-2.png" alt="" />
-              </div>
-              <div class="hero-images-container-2">
-                <img src="img/hero-image-3.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--    <div class="main">-->
+<!--      <div class="section section-images">-->
+<!--        <div class="container">-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--              <div class="hero-images-container">-->
+<!--                <img src="img/hero-image-1.png" alt="" />-->
+<!--              </div>-->
+<!--              <div class="hero-images-container-1">-->
+<!--                <img src="img/hero-image-2.png" alt="" />-->
+<!--              </div>-->
+<!--              <div class="hero-images-container-2">-->
+<!--                <img src="img/hero-image-3.png" alt="" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <basic-elements></basic-elements>
     <navigation></navigation>
     <tabs-section></tabs-section>
