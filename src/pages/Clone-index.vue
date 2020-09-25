@@ -2,8 +2,8 @@
   <div>
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
-        class="page-header-image"
-        style="background-image:url('img/cowboy-header.jpg')"
+          class="page-header-image"
+          style="background-image:url('./public/img/header.jpg')"
       >
       </parallax>
       <div class="container">
@@ -11,17 +11,17 @@
           <img class="n-logo" src="img/now-logo.png" alt="" />
           <h1 class="h1-seo">Hà Trí Sỹ</h1>
           <h3>I am decorating my sweet-home. Come back in the near future.</h3>
-          <h3></h3>
+          <h3>Tôi chỉ yêu mình cô thôi! UYÊN Ủn Ỉn ạ!.</h3>
         </div>
         <h6 class="category category-absolute">
           Designed by
-          <a href="https://www.facebook.com/ZadeMcFaro" target="_blank">
-            <img src="img/facebook-logo1.png" width="35" height="35" class="invision-logo" /> </a
+          <a href="http://invisionapp.com/" target="_blank">
+            <img src="img/invision-white-slim.png" class="invision-logo" /> </a
           >. Coded by
           <a href="https://www.creative-tim.com" target="_blank">
             <img
-              src="img/creative-tim-white-slim2.png"
-              class="creative-tim-logo"
+                src="img/creative-tim-white-slim2.png"
+                class="creative-tim-logo"
             /> </a
           >.
         </h6>
