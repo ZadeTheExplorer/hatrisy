@@ -10,7 +10,8 @@
         <div class="content-center brand">
 <!--          <img class="n-logo" src="img/now-logo.png" alt="" />-->
           <h1 class="h1-seo">Hà Trí Sỹ</h1>
-          <h3>I am decorating my sweet-home. Come back in the near future.</h3>
+          <h3>I am decorating my sweet-home.<br>Come back in the near future.</h3>
+           <h3> </h3>
           <h3></h3>
         </div>
 <!--        <h6 class="category category-absolute">-->
