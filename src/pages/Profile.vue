@@ -10,8 +10,8 @@
         <div class="photo-container">
           <img src="img/ryan.jpg" alt="" />
         </div>
-        <h3 class="title">Ryan Scheinder</h3>
-        <p class="category">Photographer</p>
+        <h3 class="title">{{this.name}}</h3>
+        <p class="category">student at VNU</p>
         <div class="content">
           <div class="social-description">
             <h2>26</h2>
@@ -132,7 +132,12 @@ export default {
   components: {
     Tabs,
     TabPane
-  }
+  },
+  data: function() {
+return {
+    name: "quang"
+  };
+}
 };
 </script>
 <style></style>

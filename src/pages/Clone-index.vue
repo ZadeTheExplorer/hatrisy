@@ -3,7 +3,7 @@
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
           class="page-header-image"
-          style="background-image:url('./public/img/header.jpg')"
+          style="background-image:url('img/header.jpg')"
       >
       </parallax>
       <div class="container">
@@ -16,7 +16,7 @@
         <h6 class="category category-absolute">
           Designed by
           <a href="http://invisionapp.com/" target="_blank">
-            <img src="img/invision-white-slim.png" class="invision-logo" /> </a
+            <img src="img/invision-white-slim.png" width="70px" class="invision-logo" /> </a
           >. Coded by
           <a href="https://www.creative-tim.com" target="_blank">
             <img
@@ -91,7 +91,7 @@ import ExamplesSection from './components/ExamplesSection';
 import DownloadSection from './components/DownloadSection';
 
 export default {
-  name: 'index',
+  name: 'clone-index',
   bodyClass: 'index-page',
   components: {
     Parallax,
