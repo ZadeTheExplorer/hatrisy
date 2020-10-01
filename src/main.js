@@ -19,11 +19,17 @@ import App from './App.vue';
 // You can change this import to `import router from './starterRouter'` to quickly start development from a blank layout.
 import router from './router';
 import NowUiKit from './plugins/now-ui-kit';
-
+import VueJsModal from "vue-js-modal";
 Vue.config.productionTip = false;
 
 Vue.use(NowUiKit);
-
+Vue.use(VueJsModal, {
+  dynamic: true,
+  dynamicDefaults: {
+    clickToClose: true,
+    injectModalsContainer: true
+  }
+});
 new Vue({
   router,
   render: h => h(App)

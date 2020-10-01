@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Starter from './pages/StarterPage.vue';
 import StarterNavbar from './layout/StarterNavbar.vue';
-import StarterFooter from './layout/StarterFooter.vue';
+import StarterFooter from './layout/FooterExample.vue';
 
 Vue.use(Router);
 

@@ -61,8 +61,11 @@
               class="nav-item"
       >
         <!--        TODO: change to /profile-->
-        <nav-link to="#LandingPage">
-          <i class="fa fa-university"></i> Landing
+        <nav-link to="#Weather">
+          <i class="fa fa-cloud"></i> Other App
+        </nav-link>
+        <nav-link to="/card">
+          <i class="fa fa-card"></i> Card Playing Ground
         </nav-link>
         <nav-link to="#Weather">
           <i class="fa fa-cloud"></i> Weather App
@@ -142,12 +145,14 @@
         </a>
       </li>
     </template>
+
   </navbar>
 </template>
 
 <script>
 import { DropDown, Navbar, NavLink } from '@/components';
 import { Popover } from 'element-ui';
+
 export default {
   name: 'main-navbar',
   props: {
@@ -159,6 +164,11 @@ export default {
     Navbar,
     NavLink,
     [Popover.name]: Popover
+  },
+  methods: {
+    handleOpenModal() {
+      this.$modal.show('alert-modal', {})
+    },
   }
 };
 </script>

@@ -28,10 +28,10 @@
 
             <template slot="raw-content">
               <div class="card-footer text-center">
-                <a
-                  href="#pablo"
+                <n-button
                   class="btn btn-primary btn-round btn-lg btn-block"
-                  >Get Started</a
+                  @click.prevent.native="handleOpenModal"
+                  >Get Started</n-button
                 >
               </div>
               <div class="pull-left">
@@ -50,19 +50,27 @@
       </div>
     </div>
     <main-footer></main-footer>
+    <NonExistAlertModal/>
   </div>
 </template>
 <script>
 import { Card, Button, FormGroupInput } from '@/components';
 import MainFooter from '@/layout/MainFooter';
+import NonExistAlertModal from "@/pages/components/Modals/aleartModalForNonExistProjects";
 export default {
   name: 'login-page',
   bodyClass: 'login-page',
   components: {
     Card,
     MainFooter,
+    NonExistAlertModal,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
+  },
+  methods: {
+    handleOpenModal() {
+      this.$modal.show('alert-modal', {})
+    },
   }
 };
 </script>

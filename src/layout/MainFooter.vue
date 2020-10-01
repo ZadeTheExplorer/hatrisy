@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="footer"
-    :class="{ [`footer-${type}`]: type }"
-    :data-background-color="backgroundColor"
+      class="footer"
+      :class="{ [`footer-${type}`]: type }"
+      :data-background-color="backgroundColor"
   >
     <div class="container">
       <nav>

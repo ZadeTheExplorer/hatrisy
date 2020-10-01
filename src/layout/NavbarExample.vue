@@ -1,8 +1,8 @@
 <template>
   <navbar position="fixed" type="primary" menu-classes="ml-auto">
-    <template>
-      <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Zade The Explorer
+    <template slot-scope="{ toggle, isToggled }">
+      <router-link v-popover:popover1 class="navbar-brand" to="/presentation">
+        My Site Name
       </router-link>
       <el-popover
           ref="popover1"
@@ -16,13 +16,13 @@
         </div>
       </el-popover>
     </template>
-<!--    <template slot="navbar-menu">-->
-<!--      <drop-down tag="li" title="Sample Dropdown">-->
-<!--        <nav-link class="dropdown-item">-->
-<!--          <i class="now-ui-icons shopping_box"></i> Headers-->
-<!--        </nav-link>-->
-<!--      </drop-down>-->
-<!--    </template>-->
+    <template slot="navbar-menu">
+      <drop-down tag="li" title="Sample Dropdown">
+        <nav-link class="dropdown-item">
+          <i class="now-ui-icons shopping_box"></i> Headers
+        </nav-link>
+      </drop-down>
+    </template>
   </navbar>
 </template>
 
@@ -33,9 +33,10 @@ import {Popover} from 'element-ui';
 export default {
   name: 'main-navbar',
   components: {
-    // DropDown,
+    DropDown,
     Navbar,
-    // NavLink,
+    NavbarToggleButton,
+    NavLink,
     [Popover.name]: Popover
   }
 };
