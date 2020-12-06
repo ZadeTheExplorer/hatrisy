@@ -4,13 +4,17 @@ import Index from './pages/Index.vue';
 import Landing from './pages/Landing.vue';
 import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
-import MainNavbar from './layout/MainNavbar.vue';
-import MainFooter from './layout/MainFooter.vue';
 import CvPage from './pages/resume';
 import CloneIndex from './pages/Clone-index'
 import CssCard from './pages/css-card'
+import Demo from './pages/test'
+
+
+import MainNavbar from './layout/MainNavbar.vue';
+import MainFooter from './layout/MainFooter.vue';
 import StarterNavbar from "@/layout/StarterNavbar";
 import StarterFooter from "@/layout/FooterExample";
+
 
 Vue.use(Router);
 
@@ -77,6 +81,13 @@ export default new Router({
             props: {
                 header: {colorOnScroll: 0},
                 footer: {backgroundColor: 'black'}
+            }
+        },
+        {
+            path: '/test',
+            name: 'test',
+            components: {default: Demo},
+            props: {
             }
         },
     ],
