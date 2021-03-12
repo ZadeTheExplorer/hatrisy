@@ -1,0 +1,33 @@
+A Beginners Guide to Neural Networks
+
+1. How do NN work?:
+    - 2 phases: Forward Propagation & Back Propagation
+    - For trainning: both these phases
+    - For predicting (unlabelled examples): simply perform ForwardPropagation
+
+    => Back Propagation is the magic to solve 
+       the tranditional question how the computer can LEARN
+
+
+2. Forward Propagation:
+
+    - Input layer => hidden layerS (users never interact with these) => output layer
+
+    - A neuron on a layer simply holds a scalar value (a number) 
+        + The value of each neuron takes on the value of parameters it represents for
+        + The value of a neuron is called it’s *activation*. 
+            => We will represent the activation of a neuron by the symbol a
+
+    - Next, we attach every neuron in the input layer to every neuron in the next layer.
+      We also add a *Weight* to each of these connections.
+        + a Weight also is a scalar value.
+        + w31 means: the weight for the connection between neuron 1 in the first layer and neuron 3 in the second layer.
+        + The larger the weight between neurons the stronger the connection between them.
+
+    - Work out the activation values (2parts):
+        + Multiply the activation of each neuron in the previous layer by the weight that is attached to it. 
+          We then add all these terms up and add a ‘bias’ term which we denote b.
+        + Finally, we put this weighted sum through a nonlinear function 
+          such as tanh(x) or the sigmoid function which I will represent by σ.
+        
+        a₁² = σ(z₁²) {z₁²: the weight sum of the first neuron in the second layer} 
