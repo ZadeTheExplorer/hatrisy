@@ -12,22 +12,8 @@
         </div>
         <h3 class="title">Patrick Ha</h3>
         <p/>
-        <p class="category">Software Developer</p>
-        <p class="category">~ Currently working in CMC Global ~</p>
-        <!--        <div class="content">-->
-        <!--          <div class="social-description">-->
-        <!--            <h2>26</h2>-->
-        <!--            <p>Comments</p>-->
-        <!--          </div>-->
-        <!--          <div class="social-description">-->
-        <!--            <h2>26</h2>-->
-        <!--            <p>Comments</p>-->
-        <!--          </div>-->
-        <!--          <div class="social-description">-->
-        <!--            <h2>48</h2>-->
-        <!--            <p>Bookmarks</p>-->
-        <!--          </div>-->
-        <!--        </div>-->
+        <p class="category">Analytics Engineer</p>
+        <p class="category">~ Currently working at Transmax, Brisbane ~</p>
       </div>
     </div>
     <div class="section cv-wrapper">
@@ -41,24 +27,21 @@
               <span class="text-primary">Ha</span>
             </h1>
             <div class="subheading mb-5">
-              Cau Giay district · Ha Noi, Vietnam · (+84) 0845829982 ·
-              <a href="mailto:name@email.com">hatrisy@gmail.com</a>
+              Brisbane, QLD · (+61) 0481112771 ·
+              <a href="mailto:hatrisy@gmail.com">hatrisy@gmail.com</a>
             </div>
-            <p class="lead mb-5">Hi! I am Sy. I spend my last 2 years learning and enhancing my value at Queensland
-              University of Technology (QUT). My proudest achievement is maintaining a distinction GPA while enjoying
-              "uni-life" in an unfamiliar country. I have been fascinated by forming future IT with AI and Big Data
-              researches. My objective is obtaining experience and knowledge to kick-start my future career as a data
-              scientist, and acquiring training in an enthusiasm start-up workspace.</p>
+            <p class="lead mb-5">Detail-oriented Analytics Engineer with over 4 years of experience specializing in
+              end-to-end data pipeline development, cloud data warehousing, and complex data modeling. Proven track
+              record of translating ambiguous business requirements into high-impact, actionable insights for
+              stakeholders using tools like DBT, Snowflake, Databricks, and Tableau. Deep experience in event-driven
+              architecture, data transformation, and partnering with business domains to drive data-based decisioning
+              and enhance platform efficiency.</p>
             <div class="social-icons">
               <a class="social-icon" href="https://www.linkedin.com/in/sy-tri-ha/" target="_blank">
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a class="social-icon" href="https://github.com/ZadeTheExplorer" target="_blank">
-
                 <i class="fab fa-github"></i>
-              </a>
-              <a class="social-icon" href="https://www.facebook.com/ZadeMcFaro" target="_blank">
-                <i class="fab fa-facebook-f"></i>
               </a>
             </div>
           </div>
@@ -69,16 +52,90 @@
           <div class="resume-section-content">
             <h2 class="mb-5">Experience</h2>
 
+            <!-- Transmax -->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Data Engineer</h3>
+                <div class="subheading mb-3">Transmax · Brisbane, QLD, Australia</div>
+                <ul>
+                  <li>Strengthened platform reliability and significantly reduced costs by diagnosing and resolving complex, long-standing production issues in event-data processing, eliminating duplicate records to improve metric accuracy and proactively optimizing DLT pipelines.</li>
+                  <li>Enabled strategic business decisions for new product initiatives by developing a stakeholder-facing interactive cost-prediction tool in Python, and delivering a successful POC for a new 'In-app reporting' feature using Databricks Lakebase.</li>
+                  <li>Hardened and scaled the core Databricks platform for new market expansion by implementing robust data clustering, automated high-availability for clusters, and enabling critical AIT testing for new customer integrations — successfully preparing the system for the USA market.</li>
+                  <li>Researched and demonstrated next-generation Databricks features including VARIANT data type, Lakebase functionality, and DLT event log for enhanced observability.</li>
+                </ul>
+              </div>
+              <div class="flex-shrink-0"><span class="text-primary">Nov 2024 – Present</span></div>
+            </div>
+
+            <!-- Cognizant Servian -->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Data Consultant</h3>
+                <div class="subheading mb-3">Cognizant Servian · Brisbane, Australia</div>
+                <ul>
+                  <li>Contributed to internal GCP Dataops 2-day Bootcamp by designing material, building demo products, and preparing tutorials on applying DevOps philosophy to data projects.</li>
+                  <li>Built a framework for automatically generating DBT DAGs in Airflow and organised a company-wide learning session on DBT–Airflow integration.</li>
+                  <li>Advised on DBT Maturity Assessment and Uplift for Western Power by reviewing their current DBT implementation in the Mid-term Forecast project to improve scalability, operations, and governance.</li>
+                </ul>
+
+                <div class="engagement mb-3">
+                  <h5 class="mb-0">Analytics Engineer — Dept. of Transport and Main Roads</h5>
+                  <span class="text-primary small">Feb 2024 – Oct 2024</span>
+                  <ul class="mt-2">
+                    <li>Designed and implemented a data pipeline to modernise annual and quarterly Excel reports by developing a Snowflake-based data model and visualising dashboards in Tableau.</li>
+                    <li>Built an automated data pipeline to replace manual reporting processes, creating Snowflake data models integrated with Alteryx and enabling Excel export via a Snowflake Streamlit app.</li>
+                  </ul>
+                </div>
+
+                <div class="engagement mb-3">
+                  <h5 class="mb-0">Data Platform Engineer — University of the Sunshine Coast</h5>
+                  <span class="text-primary small">Apr 2023 – Sep 2023</span>
+                  <ul class="mt-2">
+                    <li>Architected a comprehensive event streaming pipeline using Azure Synapse, Azure Data Factory, and Azure Functions App to capture transaction data into Segment CDP for enhanced marketing analytics.</li>
+                    <li>Contributed to solution design, data-handling capabilities, and user training for application handover.</li>
+                  </ul>
+                </div>
+
+                <div class="engagement">
+                  <h5 class="mb-0">Data Engineer — Queensland Police Service</h5>
+                  <span class="text-primary small">Aug 2022 – Mar 2023</span>
+                  <ul class="mt-2">
+                    <li>Architected and developed a document extraction pipeline using AWS Textract in Airflow with SNS &amp; SQS for asynchronous API calling, saving up to 200% of manual officer processing time.</li>
+                    <li>Maintained and enhanced data processing pipelines with SQL optimisations, bash script augmentations in OpenSearch, and centralised distributed AWS RDS instances into a data lake.</li>
+                    <li>Implemented incremental load for structured/unstructured data from AWS S3 to AWS RDS and expanded the data lake with transform models to support Image Processing &amp; Face Recognition ML models.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-shrink-0"><span class="text-primary">May 2022 – Nov 2024</span></div>
+            </div>
+
+            <!-- One Mount Group -->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Data Analytics Engineer</h3>
+                <div class="subheading mb-3">One Mount Group · Hanoi, Vietnam</div>
+                <ul>
+                  <li>Optimised migrated data validation time by ~250% by automating validation of Oracle data migrated to Google Cloud Storage using Airflow to schedule a Spark Operator on GKE for record-count and content verification.</li>
+                  <li>Designed and implemented an end-to-end ETL pipeline for workplace efficiency analytics using Jira and GitLab APIs — with Airflow for ingestion, DBT for transformation, Dremio for serving, and Superset for visualisation.</li>
+                  <li>Applied DBT framework to build financial accounting reports for large-scale datasets (80M+ records) of SAP module on a GCP-based data lake.</li>
+                </ul>
+              </div>
+              <div class="flex-shrink-0"><span class="text-primary">Aug 2021 – Mar 2022</span></div>
+            </div>
+
+            <!-- CMC Global -->
             <div class="d-flex flex-column flex-md-row justify-content-between">
               <div class="flex-grow-1">
-                <h3 class="mb-0">Software Engineering Intern</h3>
-                <div class="subheading mb-3">CMC Global</div>
-                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate
-                  B2C users after installed base benefits. Dramatically visualize customer directed convergence without
-                  revolutionary ROI.</p>
+                <h3 class="mb-0">Software Engineer</h3>
+                <div class="subheading mb-3">CMC Global · Hanoi, Vietnam</div>
+                <ul>
+                  <li>Developed an e-BackOffice system to manage human resources &amp; projects using Nuxt.js and Django, with a MySQL relational database.</li>
+                  <li>Built a responsive website in Vue.js and Django to help customers generate case studies and create training scripts for a Machine Learning chatbot.</li>
+                </ul>
               </div>
-              <div class="flex-shrink-0"><span class="text-primary" style="padding-top: -10px">July 2020 - Present</span></div>
+              <div class="flex-shrink-0"><span class="text-primary">Jul 2020 – Feb 2021</span></div>
             </div>
+
           </div>
         </section>
         <hr class="m-0"/>
@@ -86,24 +143,14 @@
         <section class="resume-section" id="education">
           <div class="resume-section-content">
             <h2 class="mb-5">Education</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div class="flex-grow-1">
-                <h3 class="mb-0">Queensland University of Technology (QUT)</h3>
-                <div class="subheading mb-3">Bachelor of Information Technology (CS)</div>
-                <div>Computer Science</div>
-                <p>Current GPA: 6.25 (out of 7)</p>
-                <div>Scholarship: QUT Science and Engineering International Merit</div>
-
-              </div>
-              <div class="flex-shrink-0"><span class="text-primary">July 2018 - June 2021</span></div>
-            </div>
             <div class="d-flex flex-column flex-md-row justify-content-between">
               <div class="flex-grow-1">
-                <h3 class="mb-0">Thai Binh Gifted High School</h3>
-                <div class="subheading mb-3"></div>
-                <p>GPA: 8.9 (out of 10)</p>
+                <h3 class="mb-0">Queensland University of Technology (QUT)</h3>
+                <div class="subheading mb-3">Bachelor of Information Technology (Computer Science)</div>
+                <p>GPA: 6.0 · Dean's List</p>
+                <p>Relevant coursework: Algorithm and Complexity, Software Development, Cloud Computing, AI, ML</p>
               </div>
-              <div class="flex-shrink-0"><span class="text-primary">August 2015 - June 2018</span></div>
+              <div class="flex-shrink-0"><span class="text-primary">Oct 2018 – Nov 2022</span></div>
             </div>
           </div>
         </section>
@@ -112,34 +159,31 @@
         <section class="resume-section" id="skills">
           <div class="resume-section-content">
             <h2 class="mb-5">Skills</h2>
-            <div class="subheading mb-3">Programming Languages</div>
+
+            <div class="subheading mb-3">Languages</div>
             <ul class="list-inline dev-icons">
-              <li class="list-inline-item"><img src="https://img.icons8.com/dusk/64/000000/python.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/javascript.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/vue-js.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/react-native.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/nodejs.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/npm.png"/></li>
-            </ul>
-            <div class="subheading mb-3">Tools</div>
-            <ul class="list-inline dev-icons">
-              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/visual-studio-code-2019.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/github.png"/></li>
-            </ul>
-            <div class="subheading mb-3">Team Collaboration Tools</div>
-            <ul class="list-inline dev-icons">
-              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/slack-new.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/trello.png"/></li>
-              <li class="list-inline-item"><img src="https://img.icons8.com/nolan/64/jira.png"/></li>
-            </ul>
-            <div class="subheading mb-3">Workflow</div>
-            <ul class="fa-ul mb-0">
-              <li>
-                <span class="fa-li"><i class="fas fa-check"></i></span>
-                Agile Development & Scrum
-              </li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/python.png" title="Python"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/javascript.png" title="JavaScript"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/sql.png" title="SQL"/></li>
             </ul>
 
+            <div class="subheading mb-3">Cloud Platforms</div>
+            <ul class="list-inline dev-icons">
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/amazon-web-services.png" title="AWS"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/google-cloud.png" title="GCP"/></li>
+              <li class="list-inline-item"><img src="https://img.icons8.com/color/64/000000/azure-1.png" title="Azure"/></li>
+            </ul>
+
+            <div class="subheading mb-3">Data Platforms & Tools</div>
+            <ul class="fa-ul mb-3">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Databricks (DLT, Lakebase, VARIANT)</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Snowflake (Streamlit, SnowPro Certified)</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>DBT Framework (DBT Certified Developer)</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Apache Airflow · Apache Spark</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Tableau · PowerBI · Apache Superset · Dremio</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Twilio Segment CDP</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Terraform · Git</li>
+            </ul>
 
           </div>
         </section>
@@ -163,10 +207,25 @@
             <h2 class="mb-5">Awards & Certifications</h2>
             <ul class="fa-ul mb-0">
               <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                Dean's List
+                <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
+                AWS Certified Solutions Architect – Associate
               </li>
-
+              <li>
+                <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
+                DBT Certified Developer
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
+                Databricks Certified Data Engineer Associate
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
+                Snowflake SnowPro Core Certification
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                QUT Dean's List
+              </li>
             </ul>
           </div>
         </section>
@@ -303,6 +362,12 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+}
+
+.engagement {
+  border-left: 3px solid #bd5d38;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
 }
 
 section.resume-section {
