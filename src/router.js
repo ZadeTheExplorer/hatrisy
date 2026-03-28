@@ -16,6 +16,8 @@ import StarterFooter from "@/layout/FooterExample";
 Vue.use(Router);
 
 export default new Router({
+    mode: 'history',
+    base: '/hatrisy/',
     linkExactActiveClass: 'active',
     routes: [
         {
