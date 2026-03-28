@@ -9,6 +9,7 @@ import MainFooter from './layout/MainFooter.vue';
 import CvPage from './pages/resume';
 import CloneIndex from './pages/Clone-index'
 import CssCard from './pages/css-card'
+import Projects from './pages/Projects.vue'
 import StarterNavbar from "@/layout/StarterNavbar";
 import StarterFooter from "@/layout/FooterExample";
 
@@ -76,6 +77,15 @@ export default new Router({
             components: {default: CssCard, header: StarterNavbar, footer: MainFooter},
             props: {
                 header: {colorOnScroll: 0},
+                footer: {backgroundColor: 'black'}
+            }
+        },
+        {
+            path: '/projects',
+            name: 'projects',
+            components: {default: Projects, header: MainNavbar, footer: MainFooter},
+            props: {
+                header: {colorOnScroll: 200},
                 footer: {backgroundColor: 'black'}
             }
         },
