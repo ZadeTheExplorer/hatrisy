@@ -31,7 +31,7 @@
         <!--        >-->
         <a
             class="nav-link"
-            href="/"
+            href="/hatrisy/"
         >
           <i class="now-ui-icons objects_spaceship"></i>
           <p>Main</p>
@@ -55,7 +55,7 @@
 <!--        </a>-->
 <!--      </drop-down>-->
       <li class="nav-item">
-        <a class="nav-link" href="#/projects">
+        <a class="nav-link" href="/hatrisy/projects">
           <i class="now-ui-icons files_single-copy-04"></i>
           <p>Projects</p>
         </a>
@@ -68,7 +68,7 @@
         <!--        >-->
         <a
             class="nav-link"
-            href="#/resume"
+            href="/hatrisy/resume"
         >
           <i class="now-ui-icons users_single-02"></i>
           <p>About Me</p>
