@@ -54,32 +54,12 @@
 <!--          <i class="now-ui-icons design_bullet-list-67"></i> Documentation-->
 <!--        </a>-->
 <!--      </drop-down>-->
-      <drop-down
-              tag="li"
-              title="Projects"
-              icon="now-ui-icons files_single-copy-04"
-              class="nav-item"
-      >
-        <!--        TODO: change to /profile-->
-        <nav-link to="#Weather">
-          <i class="fa fa-cloud"></i> Other App
-        </nav-link>
-        <nav-link to="/card">
-          <i class="fa fa-card"></i> Card Playing Ground
-        </nav-link>
-        <nav-link to="#Weather">
-          <i class="fa fa-cloud"></i> Weather App
-        </nav-link>
-        <nav-link to="#Calculator">
-          <i class="fa fa-calculator"></i> Online Calculator
-        </nav-link>
-        <nav-link to="#Login">
-          <i class="now-ui-icons users_circle-08"></i> Login
-        </nav-link>
-        <nav-link to="/resume">
-          <i class="now-ui-icons users_single-02"></i> Profile
-        </nav-link>
-      </drop-down>
+      <li class="nav-item">
+        <a class="nav-link" href="#/projects">
+          <i class="now-ui-icons files_single-copy-04"></i>
+          <p>Projects</p>
+        </a>
+      </li>
       <li class="nav-item">
         <!--        <a-->
         <!--          class="nav-item"-->
@@ -150,7 +130,7 @@
 </template>
 
 <script>
-import { DropDown, Navbar, NavLink } from '@/components';
+import { Navbar } from '@/components';
 import { Popover } from 'element-ui';
 
 export default {
@@ -160,9 +140,7 @@ export default {
     colorOnScroll: Number
   },
   components: {
-    DropDown,
     Navbar,
-    NavLink,
     [Popover.name]: Popover
   },
   methods: {
