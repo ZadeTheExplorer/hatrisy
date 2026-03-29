@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick's Financial Dashboard — 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+:root {
+  --primary: #2563eb;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger:  #dc2626;
+  --neutral: #64748b;
+  --violet:  #7c3aed;
+  --amber:   #b45309;
+  --sky:     #0369a1;
+  --bg:      #ffffff;
+  --bg2:     #f8fafc;
+  --bg3:     #f1f5f9;
+  --border:  #e2e8f0;
+  --text:    #0f172a;
+  --text2:   #475569;
+  --text3:   #94a3b8;
+  --shadow:  0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
+  --radius:  10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0f172a; --bg2:#1e293b; --bg3:#334155;
+    --border:#334155; --text:#f1f5f9; --text2:#94a3b8; --text3:#64748b;
+    --shadow:0 1px 3px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg2);color:var(--text);font-size:14px}
+.header{background:var(--primary);color:#fff;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+.header h1{font-size:1.4rem;font-weight:700}
+.header p{font-size:.8rem;opacity:.75;margin-top:2px}
+.badge{background:rgba(255,255,255,.2);border-radius:20px;padding:4px 12px;font-size:.75rem}
+.container{max-width:1300px;margin:0 auto;padding:20px 16px}
+.sec{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin:24px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-bottom:8px}
+.card{background:var(--bg);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.card .lbl{font-size:.7rem;color:var(--text2);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.card .val{font-size:1.5rem;font-weight:700;margin-top:4px}
+.card .sub{font-size:.72rem;color:var(--text2);margin-top:2px}
+.green{color:var(--success)}.amber{color:var(--warning)}.red{color:var(--danger)}.blue{color:var(--primary)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.cc{background:var(--bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.cc h3{font-size:.85rem;font-weight:700;margin-bottom:14px}
+.cc .sub2{font-size:.72rem;color:var(--text2);margin-top:-10px;margin-bottom:14px}
+canvas{max-height:280px}
+.warn-box{background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--radius);padding:12px 16px;margin:8px 0;font-size:.82rem;color:#7c2d12}
+.info-box{background:#eff6ff;border:1px solid #93c5fd;border-radius:var(--radius);padding:12px 16px;margin:8px 0;font-size:.82rem;color:#1e40af}
+.goals-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.gc{background:var(--bg);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.gc .gn{font-size:.85rem;font-weight:700}
+.gc .ge{font-size:.7rem;color:var(--text2);margin-top:2px;margin-bottom:10px}
+.pb{background:var(--bg3);border-radius:6px;height:10px;overflow:hidden}
+.pf{height:100%;border-radius:6px;transition:width .4s}
+.ga{display:flex;justify-content:space-between;font-size:.72rem;color:var(--text2);margin-top:5px}
+.bt{width:100%;border-collapse:collapse;font-size:.82rem}
+.bt th{background:var(--bg3);font-weight:700;padding:8px 10px;text-align:left;border-bottom:2px solid var(--border);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.bt td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.bt tr:hover td{background:var(--bg2)}
+.bt .sh td{font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;padding-top:12px;color:var(--text2)}
+.bt .st td{font-weight:700;background:var(--bg2);border-top:2px solid var(--border)}
+.bt .tr td{font-weight:700;font-size:.9rem;background:var(--bg3);border-top:2px solid var(--border)}
+.nr{text-align:right;font-variant-numeric:tabular-nums}
+.pt{text-align:right;color:var(--text2);font-size:.72rem}
+.tn{color:var(--primary)}.tw{color:var(--violet)}.tp{color:var(--amber)}.ts{color:var(--success)}
+.sl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+.si{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:9px 13px}
+.si .sn{font-weight:600;font-size:.82rem}
+.si .sc{font-weight:700;font-size:.88rem}
+.si .snt{font-size:.7rem;color:var(--text2);margin-top:1px}
+.sw{border-color:#fca5a5;background:#fef2f2}.sr{border-color:#fcd34d;background:#fffbeb}.so{border-color:#86efac;background:#f0fdf4}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.pg{grid-template-columns:1fr}}
+.pc{border-radius:var(--radius);padding:16px 18px;border:1px solid var(--border)}
+.pc h4{font-size:.88rem;font-weight:700;margin-bottom:4px}
+.pc .pd{font-size:.72rem;opacity:.7;margin-bottom:10px}
+.pc ul{list-style:none}
+.pc ul li{font-size:.78rem;padding:3px 0;color:var(--text2)}
+.pc ul li::before{content:"→ ";font-weight:700;opacity:.5}
+footer{text-align:center;font-size:.72rem;color:var(--text3);padding:20px;margin-top:12px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Patrick's Financial Dashboard</h1>
+    <p>Data: Jul 2024 – Mar 2026 &nbsp;·&nbsp; 1,292 transactions &nbsp;·&nbsp; CC + Debit</p>
+  </div>
+  <span class="badge">Updated 29 Mar 2026</span>
+</div>
+
+<div class="container">
+
+<div class="sec">At a glance</div>
+<div class="cards">
+  <div class="card"><div class="lbl">Net Income / fn</div><div class="val blue">$3,959</div><div class="sub">$138k gross · Medicare exempt</div></div>
+  <div class="card"><div class="lbl">Savings Rate</div><div class="val green">32.6%</div><div class="sub">Above 20% target ✓</div></div>
+  <div class="card"><div class="lbl">Total Savings</div><div class="val amber">$10,000</div><div class="sub">ANZ Plus 78954 · all-purpose</div></div>
+  <div class="card"><div class="lbl">Emergency Fund</div><div class="val red">$0</div><div class="sub">Target $6,500 · critical gap</div></div>
+  <div class="card"><div class="lbl">ETF Portfolio</div><div class="val green">$3,300</div><div class="sub">Started Dec 2025</div></div>
+  <div class="card"><div class="lbl">Net Buffer / fn</div><div class="val amber">$99</div><div class="sub">After all budget lines</div></div>
+</div>
+
+<div class="warn-box">
+  ⚠️ <strong>PR Visa:</strong> $12,500 needed · $10,000 saved — top up $2,500 before Jun 2026 &nbsp;|&nbsp;
+  <strong>Ring Fund:</strong> At $692/fn → only ~$20k by Jun 2027 — must increase to $1,077/fn from Jun 2026 &nbsp;|&nbsp;
+  <strong>Action now:</strong> Cancel Google One monthly ($32/mo) — annual plan already active
+</div>
+
+<div class="sec">Budget breakdown</div>
+<div class="grid2">
+  <div class="cc">
+    <h3>Fortnightly Budget — Phase 1 (Now–Jun 2026)</h3>
+    <div class="sub2">Net $3,959/fn · $3,946 allocated · $13 buffer</div>
+    <canvas id="budgetDonut"></canvas>
+  </div>
+  <div class="cc">
+    <h3>Monthly Spending Trend</h3>
+    <div class="sub2">Apr 2025 – Mar 2026 · excl. travel &amp; savings transfers</div>
+    <canvas id="trendChart"></canvas>
+  </div>
+</div>
+
+<div class="sec">Detailed fortnightly budget (all 3 phases)</div>
+<div class="cc" style="overflow-x:auto">
+<table class="bt">
+  <thead>
+    <tr>
+      <th style="width:32%">Category</th>
+      <th class="nr">Phase 1 /fn</th>
+      <th class="nr">Phase 2 /fn</th>
+      <th class="nr">Phase 3 /fn</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="sh"><td colspan="5"><span class="tn">● NEEDS</span></td></tr>
+    <tr><td>Rent</td><td class="nr">$531.00</td><td class="nr">$531.00</td><td class="nr">$531.00</td><td>$265.50/wk × 2</td></tr>
+    <tr><td>Electricity (net)</td><td class="nr">$17.31</td><td class="nr">$17.31</td><td class="nr">$17.31</td><td>¼ household (~$150/mo gross)</td></tr>
+    <tr><td>Internet (net)</td><td class="nr">$14.88</td><td class="nr">$14.88</td><td class="nr">$14.88</td><td>¼ household ($129/mo Aussie BB)</td></tr>
+    <tr><td>Phone (Amaysim)</td><td class="nr">$13.85</td><td class="nr">$13.85</td><td class="nr">$13.85</td><td>$30/mo</td></tr>
+    <tr><td>Health insurance (CBHS)</td><td class="nr">$27.69</td><td class="nr">$27.69</td><td class="nr">$27.69</td><td>$60/mo</td></tr>
+    <tr><td>Rego (sinking fund)</td><td class="nr">$30.77</td><td class="nr">$30.77</td><td class="nr">$30.77</td><td>$800/yr ÷ 26</td></tr>
+    <tr><td>Fuel</td><td class="nr">$83.08</td><td class="nr">$83.08</td><td class="nr">$83.08</td><td>~$180/mo</td></tr>
+    <tr><td>Parking + Tolls</td><td class="nr">$50.00</td><td class="nr">$50.00</td><td class="nr">$50.00</td><td>~$108/mo combined</td></tr>
+    <tr><td>Groceries</td><td class="nr">$135.00</td><td class="nr">$135.00</td><td class="nr">$135.00</td><td>~$292/mo data avg</td></tr>
+    <tr class="st"><td>Needs subtotal</td><td class="nr">$903.58</td><td class="nr">$903.58</td><td class="nr">$903.58</td><td class="pt">22.8% of income</td></tr>
+
+    <tr class="sh"><td colspan="5"><span class="tw">● WANTS</span></td></tr>
+    <tr><td>Dining out</td><td class="nr">$600.00</td><td class="nr">$550.00</td><td class="nr">$600.00</td><td>Budget target; actual avg ~$1,100–1,400/mo</td></tr>
+    <tr><td>Badminton</td><td class="nr">$150.00</td><td class="nr">$150.00</td><td class="nr">$150.00</td><td>~$325/mo avg</td></tr>
+    <tr><td>Subscriptions</td><td class="nr">$75.00</td><td class="nr">$75.00</td><td class="nr">$75.00</td><td>~$162/mo; cancel Google One monthly</td></tr>
+    <tr><td>Shopping + Amazon</td><td class="nr">$69.23</td><td class="nr">$69.23</td><td class="nr">$69.23</td><td>~$150/mo</td></tr>
+    <tr><td>Clothing + personal care</td><td class="nr">$80.77</td><td class="nr">$80.77</td><td class="nr">$80.77</td><td>~$175/mo combined</td></tr>
+    <tr><td>Health + pharmacy</td><td class="nr">$35.00</td><td class="nr">$35.00</td><td class="nr">$35.00</td><td>~$75/mo; spiky</td></tr>
+    <tr><td>Gaming + misc</td><td class="nr">$30.77</td><td class="nr">$30.77</td><td class="nr">$30.77</td><td>~$67/mo</td></tr>
+    <tr class="st"><td>Wants subtotal</td><td class="nr">$1,040.77</td><td class="nr">$990.77</td><td class="nr">$1,040.77</td><td class="pt">26.3% of income</td></tr>
+
+    <tr class="sh"><td colspan="5"><span class="tp">● PEOPLE</span></td></tr>
+    <tr><td>Partner support (Jessica)</td><td class="nr">$500.00</td><td class="nr">$500.00</td><td class="nr">$500.00</td><td>Confirmed; historical avg inflated by FX transfers</td></tr>
+    <tr><td>Family remittance (Vietnam)</td><td class="nr">$76.92</td><td class="nr">$76.92</td><td class="nr">$76.92</td><td>$2,000/yr ÷ 26</td></tr>
+    <tr><td>Car maintenance (sinking)</td><td class="nr">$46.15</td><td class="nr">$46.15</td><td class="nr">$46.15</td><td>$1,200/yr ÷ 26</td></tr>
+    <tr class="st"><td>People subtotal</td><td class="nr">$623.07</td><td class="nr">$623.07</td><td class="nr">$623.07</td><td class="pt">15.7% of income</td></tr>
+
+    <tr class="sh"><td colspan="5"><span class="ts">● SAVINGS &amp; INVESTMENTS</span></td></tr>
+    <tr><td>Ring fund (ANZ Plus 78954)</td><td class="nr">$500.00</td><td class="nr">$1,077.00</td><td class="nr">$692.31</td><td>Phase 2: must be $1,077/fn to hit Jun 2027 deadline</td></tr>
+    <tr><td>ETF investments</td><td class="nr">$230.77</td><td class="nr">$230.77</td><td class="nr">$230.77</td><td>Broker TBC</td></tr>
+    <tr><td>Emergency fund</td><td class="nr">$230.77</td><td class="nr">$230.77</td><td class="nr">$230.77</td><td>$6,500 target; $0 currently — critical</td></tr>
+    <tr><td>Travel fund</td><td class="nr">$0.00</td><td class="nr">$138.46</td><td class="nr">$138.46</td><td>Paused Phase 1; resume Phase 2</td></tr>
+    <tr><td>PR visa top-up (temporary)</td><td class="nr">$416.67</td><td class="nr">$0.00</td><td class="nr">$0.00</td><td>Phase 1 only: $2,500 over 6 fortnights</td></tr>
+    <tr class="st"><td>Savings subtotal</td><td class="nr">$1,378.21</td><td class="nr">$1,677.00</td><td class="nr">$1,292.31</td><td class="pt">34.8% → 42.4% → 32.6%</td></tr>
+
+    <tr class="tr"><td>TOTAL OUTGOINGS</td><td class="nr">$3,945.63</td><td class="nr">$4,194.42</td><td class="nr">$3,859.73</td><td></td></tr>
+    <tr class="tr"><td>NET BUFFER</td><td class="nr green">$13.29</td><td class="nr red">–$235.50</td><td class="nr green">$99.19</td><td>Phase 2 gap: cut dining $50/fn + find $186/fn</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="info-box">
+  💡 <strong>Phase 2 gap of $235/fn:</strong> The PR visa top-up ($416/fn) ends Jun 2026, but ring fund increase (+$385/fn) + travel fund resume (+$138/fn) exceed that saving by $107/fn. Bridging options: cut dining $50/fn, reduce partner support temporarily, or trim emergency fund contribution.
+</div>
+
+<div class="sec">Top spending categories — monthly averages (excl. travel, rent, savings)</div>
+<div class="cc">
+  <h3>Average Monthly Spend by Category</h3>
+  <div class="sub2">Jul 2024 – Mar 2026 · CC + Debit · travel-excluded · excl. rent &amp; internal savings transfers</div>
+  <canvas id="catBar" style="max-height:340px"></canvas>
+</div>
+
+<div class="sec">Savings goals</div>
+<div class="goals-grid">
+  <div class="gc">
+    <div class="gn red">PR Visa Fund</div>
+    <div class="ge">Lodge ~Jun 2026 · Total cost $12,500</div>
+    <div class="pb"><div class="pf" style="width:80%;background:var(--warning)"></div></div>
+    <div class="ga"><span>$10,000 saved</span><span>$12,500 target</span></div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text2)">Need $2,500 more → $416/fn for 3 months</div>
+  </div>
+  <div class="gc">
+    <div class="gn red">Emergency Fund</div>
+    <div class="ge">3-month essential expenses · Target $6,500</div>
+    <div class="pb"><div class="pf" style="width:0%;background:var(--danger)"></div></div>
+    <div class="ga"><span>$0 dedicated</span><span>$6,500 target</span></div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text2)">At $231/fn → ~14 months to fund</div>
+  </div>
+  <div class="gc">
+    <div class="gn" style="color:var(--violet)">Ring Fund</div>
+    <div class="ge">Deadline Jun 2027 · Target $30,000</div>
+    <div class="pb"><div class="pf" style="width:0%;background:var(--violet)"></div></div>
+    <div class="ga"><span>$0 dedicated (visa = priority)</span><span>$30,000</span></div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text2)">⚠️ Must increase to $1,077/fn from Jun 2026</div>
+  </div>
+  <div class="gc">
+    <div class="gn green">ETF Investments</div>
+    <div class="ge">Ongoing · $231/fn contribution</div>
+    <div class="pb"><div class="pf" style="width:100%;background:var(--success)"></div></div>
+    <div class="ga"><span>$3,300 invested</span><span>Ongoing</span></div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text2)">Started Dec 2025 · broker TBC</div>
+  </div>
+  <div class="gc">
+    <div class="gn blue">Travel Fund</div>
+    <div class="ge">Target $5,000 · paused during Phase 1</div>
+    <div class="pb"><div class="pf" style="width:0%;background:var(--primary)"></div></div>
+    <div class="ga"><span>$0 dedicated</span><span>$5,000 target</span></div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text2)">Resume $138/fn from Jun 2026</div>
+  </div>
+</div>
+
+<div class="sec">3-phase financial plan</div>
+<div class="pg">
+  <div class="pc" style="background:#eff6ff;border-color:#93c5fd">
+    <h4 style="color:var(--primary)">Phase 1 — Now to Jun 2026</h4>
+    <div class="pd" style="color:var(--primary)">PR Visa top-up period</div>
+    <ul>
+      <li>Top up PR visa: $416/fn for 6fn</li>
+      <li>Ring fund reduced to $500/fn</li>
+      <li>Travel fund paused</li>
+      <li>Buffer: ~$13/fn (very tight)</li>
+      <li>Cancel Google One monthly now</li>
+      <li>Build emergency fund $231/fn</li>
+    </ul>
+  </div>
+  <div class="pc" style="background:#faf5ff;border-color:#c4b5fd">
+    <h4 style="color:var(--violet)">Phase 2 — Jun 2026 to Jun 2027</h4>
+    <div class="pd" style="color:var(--violet)">Ring fund push to proposal deadline</div>
+    <ul>
+      <li>PR lodged ✓</li>
+      <li>Ring fund to $1,077/fn</li>
+      <li>Travel fund resumes $138/fn</li>
+      <li>Dining cut to $550/fn</li>
+      <li>Still $235/fn gap — needs bridging</li>
+      <li>Emergency fund at $231/fn</li>
+    </ul>
+  </div>
+  <div class="pc" style="background:#f0fdf4;border-color:#86efac">
+    <h4 style="color:var(--success)">Phase 3 — Jun 2027+</h4>
+    <div class="pd" style="color:var(--success)">Post-proposal, PR approved</div>
+    <ul>
+      <li>Proposal done 💍</li>
+      <li>Ring fund line → home deposit / ETF</li>
+      <li>Budget relaxes ($99/fn buffer)</li>
+      <li>PR status upgraded</li>
+      <li>Ramp ETF contributions</li>
+      <li>Emergency fund → 6 months</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sec">Subscription audit — $194/mo current · cancel Google One monthly to save $32/mo</div>
+<div class="sl">
+  <div class="si sw"><div><div class="sn">Google One 2TB</div><div class="snt">CANCEL MONTHLY — annual $142 already active</div></div><div class="sc red">$32</div></div>
+  <div class="si sr"><div><div class="sn">ChatGPT Plus</div><div class="snt">Restarted Mar 2026 — need both Claude + GPT?</div></div><div class="sc amber">$30</div></div>
+  <div class="si so"><div><div class="sn">Uber One</div><div class="snt">Active</div></div><div class="sc">$38</div></div>
+  <div class="si so"><div><div class="sn">Claude.ai</div><div class="snt">Annual plan active (Sep 2025)</div></div><div class="sc">$28</div></div>
+  <div class="si so"><div><div class="sn">Canva</div><div class="snt">Active</div></div><div class="sc">$20</div></div>
+  <div class="si so"><div><div class="sn">Spotify</div><div class="snt">Active</div></div><div class="sc">$16</div></div>
+  <div class="si so"><div><div class="sn">GitHub</div><div class="snt">Debit card xx8223 · USD $10</div></div><div class="sc">$16</div></div>
+  <div class="si so"><div><div class="sn">Amazon Prime</div><div class="snt">Active</div></div><div class="sc">$10</div></div>
+  <div class="si so"><div><div class="sn">Twitter/X Blue</div><div class="snt">Active</div></div><div class="sc">$4</div></div>
+</div>
+<div class="info-box" style="margin-top:10px">
+  After cancelling Google One monthly: <strong>$162/mo</strong> total subscriptions · budget $162.50/mo ($75/fn) ✓
+</div>
+
+</div>
+
+<footer>Patrick's Financial Dashboard &nbsp;·&nbsp; Data: Jul 2024 – Mar 2026 &nbsp;·&nbsp; 1,292 transactions &nbsp;·&nbsp; ⚠️ General information only, not financial advice</footer>
+
+<script>
+const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const textColor = dark ? '#94a3b8' : '#475569';
+const gridColor = dark ? '#1e293b' : '#e2e8f0';
+Chart.defaults.color = textColor;
+Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+Chart.defaults.font.size = 11;
+
+// Budget donut — Phase 1 allocation
+new Chart(document.getElementById('budgetDonut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Needs', 'Wants', 'People', 'Savings + Visa top-up'],
+    datasets: [{
+      data: [903.58, 1040.77, 623.07, 1378.21],
+      backgroundColor: ['#2563eb', '#7c3aed', '#f59e0b', '#16a34a'],
+      borderWidth: 3,
+      borderColor: dark ? '#0f172a' : '#ffffff'
+    }]
+  },
+  options: {
+    responsive: true, cutout: '62%',
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 14 } },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const v = ctx.parsed;
+            const t = ctx.dataset.data.reduce((a,b) => a+b, 0);
+            return ` ${ctx.label}: $${v.toFixed(0)}/fn (${(v/t*100).toFixed(1)}%)`;
+          }
+        }
+      }
+    }
+  }
+});
+
+// Monthly trend — Apr 2025 to Mar 2026
+const months12 = ['Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26'];
+const mNeeds   = [1484, 2262, 2014, 2006, 2375, 1974, 2117, 1471, 1704, 3318, 1150, 1150];
+const mWants   = [440,  2498, 2750, 5227, 3294, 4621, 3145,  828, 3247, 4001,  790,  845];
+const mPeople  = [1350, 3670, 7233, 4186, 5000,  875, 2000, 4410,  500,  276, 1832, 1000];
+const mOneOff  = [0, 0, 0, 0, 0, 0, 2467, 0, 0, 0, 0, 0];
+
+new Chart(document.getElementById('trendChart'), {
+  type: 'bar',
+  data: {
+    labels: months12,
+    datasets: [
+      { label: 'Needs',  data: mNeeds,  backgroundColor: '#3b82f6', stack: 'a' },
+      { label: 'Wants',  data: mWants,  backgroundColor: '#7c3aed', stack: 'a' },
+      { label: 'People', data: mPeople, backgroundColor: '#f59e0b', stack: 'a' },
+      { label: 'One-off',data: mOneOff, backgroundColor: '#dc2626', stack: 'a' },
+    ]
+  },
+  options: {
+    responsive: true,
+    interaction: { mode: 'index' },
+    scales: {
+      x: { grid: { color: gridColor }, stacked: true },
+      y: { grid: { color: gridColor }, stacked: true,
+           ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'k' } }
+    },
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 12 } },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: $${ctx.parsed.y.toLocaleString()}`,
+          footer: items => `Total: $${items.reduce((s,i) => s + i.parsed.y, 0).toLocaleString()}`
+        }
+      }
+    }
+  }
+});
+
+// Category bar
+const catNames  = ['Dining Out','Partner Support','Badminton','Subscriptions','Fuel','Electricity','Shopping','Clothing','Personal Care','Health/Pharmacy'];
+const catValues = [1353, 1083, 294, 98, 96, 85, 90, 70, 57, 54];
+const catColors = ['#7c3aed','#b45309','#3b82f6','#8b5cf6','#64748b','#0ea5e9','#ec4899','#f43f5e','#f59e0b','#10b981'];
+
+new Chart(document.getElementById('catBar'), {
+  type: 'bar',
+  data: {
+    labels: catNames,
+    datasets: [{
+      label: 'Avg monthly spend',
+      data: catValues,
+      backgroundColor: catColors,
+      borderRadius: 4, borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y', responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` $${ctx.parsed.x.toLocaleString()}/mo avg` } }
+    },
+    scales: {
+      x: { grid: { color: gridColor }, ticks: { callback: v => '$' + v.toLocaleString() } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html>
