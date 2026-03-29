@@ -54,12 +54,19 @@
 <!--          <i class="now-ui-icons design_bullet-list-67"></i> Documentation-->
 <!--        </a>-->
 <!--      </drop-down>-->
-      <li class="nav-item">
-        <a class="nav-link" href="/hatrisy/projects">
-          <i class="now-ui-icons files_single-copy-04"></i>
-          <p>Projects</p>
+      <drop-down
+        tag="li"
+        title="Projects"
+        icon="now-ui-icons files_single-copy-04"
+        class="nav-item"
+      >
+        <nav-link to="/projects">
+          <i class="now-ui-icons design_app"></i> Showcase
+        </nav-link>
+        <a href="/hatrisy/dashboard/" class="dropdown-item">
+          <i class="now-ui-icons business_chart-bar-32"></i> Financial Dashboard
         </a>
-      </li>
+      </drop-down>
       <li class="nav-item">
         <!--        <a-->
         <!--          class="nav-item"-->
@@ -130,7 +137,7 @@
 </template>
 
 <script>
-import { Navbar } from '@/components';
+import { DropDown, Navbar, NavLink } from '@/components';
 import { Popover } from 'element-ui';
 
 export default {
@@ -140,7 +147,9 @@ export default {
     colorOnScroll: Number
   },
   components: {
+    DropDown,
     Navbar,
+    NavLink,
     [Popover.name]: Popover
   },
   methods: {
